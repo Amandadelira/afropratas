@@ -1,8 +1,8 @@
-# Localização do Projeto
+### Localização do Projeto
     xammp/htdocs/xampp/lp2/Afropratas
 
 
-# Contato
+## Contato
     Amanda.lira@aluno.ifsp.edu.br
 
 ## Autoria

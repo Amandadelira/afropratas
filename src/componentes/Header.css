@@ -1,0 +1,8 @@
+.header-nav {
+    background: rgb(197, 194, 184);
+    display: flex;
+    justify-content: space-beteween;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    color:rgb(238, 202, 159)
+}

@@ -1,15 +1,15 @@
-import "./Nav.css"
+import React from "react";
 
-const Nav = () => {
-    return(
-        <nav>
-            <ul>
-                <li>Até 6x sem juros no cartão</li>
-                <li>Até 10% de desconto no boleto</li>
-                <li>Encontre uma loja perto de você</li>
-            </ul>
-        </nav>
-    );
-};
+function Nav() {
+  return (
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Quem Somos</li>
+        <li>Contato</li>
+      </ul>
+    </nav>
+  );
+}
 
 export default Nav;

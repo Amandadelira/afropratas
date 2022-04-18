@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Nav from "./components/Nav";
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-class App extends React.Component {
-  render() {
-    return <Nav></Nav>;
-  }
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+     <App />
+  </React.StrictMode>,
+       document.getElementById("root")
+);
+reportWebVitals ();

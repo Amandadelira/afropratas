@@ -1,7 +1,13 @@
 import './App.css';
-import Header from "./componentes/Header"
+import ApiRequest from "./ApiRequest";
+
 
 function App() {
-  return <Header />
+  return(
+    <>
+    <h1>Clean</h1>
+    <ApiRequest />
+    </>
+  );
 }
 export default App;

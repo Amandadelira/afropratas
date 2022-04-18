@@ -1,15 +1,16 @@
-import React from "react";
+import "./Nav.css";
 
-function Nav() {
-  return (
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Quem Somos</li>
-        <li>Contato</li>
-      </ul>
-    </nav>
-  );
-}
+const Nav = () =>{
+    return(
+    <Nav>
+        <ul>
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Longin</li>
+            <li>Cadastre-se</li>
+        </ul>
+    </Nav>
+    );
+};
 
 export default Nav;

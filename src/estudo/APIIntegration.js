@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import FormUser from "./FormUser";
 import {BsTrash} from "react-icons/bs"
+import {TiEdit as IconEdit} from 'react-icons/ti'
+import { useNavigate } from 'react-router-dom'
 
 const APIIntegration = () => {
 const [users, setUsers] = useState(null);
+const navigate = useNavigate();
 
 useEffect(() => {
   fetch("http://localhost/afropratas-back-end/api/user/select-all")
@@ -28,22 +31,30 @@ const handleTrashClick = (userId) => {
     });
 }
 
-return (
-    <>
-    <FormUser setUsers={setUsers} users={users}/>
-    {users &&
-      users.map((user) => {
-        return (
-          <div key={user.id}>
-            <h1>{user.name}</h1>
-            <p>{user.email}</p>
-            <BsTrash onClick={() => handleTrashClick(user.id)}/>
-          </div>
-        )
-      })
-    }
-    </>
-  )
-}
 
+return (
+  <>
+  <FormUser setUsers={setUsers} users={users}/>
+  {users &&
+    users.map((user) => {
+      return (
+        <div key={user.id}>
+          <h1>{user.name}</h1>
+          <p>{user.email}</p>
+          <IconTrash onClick={() => handleTrashClick(user.id)}/>
+          <IconTrash 
+            onClick={() => handleTrashClick(user.id)}
+            style={{cursor: 'pointer'}}
+          />
+          <IconEdit 
+            onClick={() => navigate('edit/'+user.id)} 
+            style={{cursor: 'pointer'}}
+          />
+        </div>
+      )
+    })
+  }
+  </>
+)
+}
 export default APIIntegration

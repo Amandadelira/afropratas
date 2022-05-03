@@ -1,6 +1,6 @@
 <!-- ### Localização do Projeto
-    xammp/htdocs/xampp/lp2/Afropratas -->
-
+    xammp/htdocs/xampp/Afropratas 
+    #Tutorial React -->
 ## Contato
     Amanda.lira@aluno.ifsp.edu.br
 

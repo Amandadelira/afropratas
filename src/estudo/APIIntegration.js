@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FormUser from "./FormUser";
-import {BsTrash} from "react-icons/bs"
+import {BsTrash as IconTrash} from "react-icons/bs"
 import {TiEdit as IconEdit} from 'react-icons/ti'
 import { useNavigate } from 'react-router-dom'
 
@@ -41,7 +41,6 @@ return (
         <div key={user.id}>
           <h1>{user.name}</h1>
           <p>{user.email}</p>
-          <IconTrash onClick={() => handleTrashClick(user.id)}/>
           <IconTrash 
             onClick={() => handleTrashClick(user.id)}
             style={{cursor: 'pointer'}}

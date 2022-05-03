@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import Menu from "./estudo/Menu";
 import NotFound from './pages/NotFound'
 import EditUser from './estudo/EditUser'
+import EditUserOnChange from './estudo/EditUserOnChange'
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
           <Route path="api-integration" >
             <Route index element={<APIIntegration />}/>
             <Route path="edit/:userId" element={<EditUser />} />
+            <Route path="edit/:userId" element={<EditUserOnChange />} />
           </Route>
           <Route path="props" element={<UsandoProps />} />
           <Route path="children" element={ 

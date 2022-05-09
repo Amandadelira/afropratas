@@ -1,74 +1,38 @@
-import AddImage from './estudo/addimage';
-import ExemploContexto from './estudo/ExemploContexto';
-import UsandoProps from './estudo/UsandoProps'
-import LangContext from './estudo/LangContext'
-import { useState } from 'react'
-import UsandoChildren from './estudo/UsandoChildren';
-import UsandoIcons from './estudo/UsandoIcons';
-import APIIntegration from './estudo/APIIntegration';
-import { Routes, Route } from "react-router-dom";
-import NotFound from './pages/NotFound'
-import EditUser from './estudo/EditUser'
-import EditUserOnChange from './estudo/EditUserOnChange'
-import LayoutDefault from './pages/LayoutDefault';
-import LayoutDashboard from './pages/LayoutDashboard';
+import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import Home from './componentes/pages/Home'
+import Company from './componentes/pages/Company'
+import Contact from './componentes/pages/Contact'
+import NewProject from './componentes/pages/NewProject'
 
-
+import Container from './componentes/layout/Container'
 function App() {
-
-  const lang = {
-    br: {
-      welcome: 'Bem-Vindo',
-      changeLanguage: 'Alterar Idioma',
-      portuguese: 'Português',
-      english: 'Inglês',
-      textIntroduction: ''
-    },
-    en: {
-      welcome: 'Welcome',
-      changeLanguage: 'Change Language',
-      portuguese: 'Portuguese',
-      english: 'English'
-    }
-  }
-
- const currentLangState = useState('br');
- const [currentLang, setCurrentLanguage] = currentLangState;
-
- const toggleLanguage = () => {
-  const newLanguage = currentLang === 'br' ? 'en' : 'br'
-  setCurrentLanguage(newLanguage)
- }
-
  return (
-  <LangContext.Provider value={[
-      currentLang === 'br' ? lang.br : lang.en,
-      toggleLanguage,
-      setCurrentLanguage
-    ]}>
-    <div className="App">
-
-        <Routes>
-        <Route path="/" element={<LayoutDefault />}>
-            <Route index element={<ExemploContexto/>} />
-            <Route path="props" element={<UsandoProps />} />
-            <Route path="children" element={<UsandoChildren />} />
-            <Route path="images">
-              <Route index element={<AddImage />} />
-              <Route path="icon" element={<UsandoIcons />} />
-            </Route>
-          </Route>
-          <Route path='admin' element={<LayoutDashboard />} >
-              <Route index element={<APIIntegration />}/>
-              <Route path="edit/:userId" element={<EditUserOnChange />} />
-          </Route>
-    
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-    
-    </div>
-  </LangContext.Provider>
-  );
+         <Router>
+            <div>
+               <Link to="/">Home</Link>
+               <Link to="/company">Equipe</Link>
+               <Link to="/contact">Contact</Link>
+               <Link to="/newproject">Novo Projeto</Link>
+            </div>
+            <Switch>
+               <Container>
+                  <Route exact path="/">
+                     <Home />
+                  </Route>
+                  <Route exact path="/company">
+                     <Company />
+                  </Route>
+                  <Route exact path="/contact">
+                     <Contact />
+                  </Route>
+                  <Route exact path="/newproject">
+                     <NewProject />
+                  </Route>
+               </Container>
+            </Switch>
+            <p>Footer</p>
+         </Router>
+  )
 }
 
 export default App;

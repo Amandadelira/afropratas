@@ -1,8 +1,15 @@
-.nav-menu{
-    display: flex;
-    margin: 0 0 0 1rem;
-    list-style-type: none;
+.List{
+    display:flex;
+    list-style: none;
+    align-items: center;
 }
-.nav-menu li{
-    margin: 0 0 0 1rem;
+.item{
+    margin-right: 1em;
+}
+.item a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+.item a :hover {
+    color: rgb(228, 138, 193);
 }

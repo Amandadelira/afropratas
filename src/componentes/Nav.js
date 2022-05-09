@@ -1,15 +1,29 @@
 import "./Nav.css";
+import {Link} from 'react-router-dom'
 
-const Nav = () =>{
+function Nav () {
     return(
-    <Nav>
-        <ul>
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Longin</li>
-            <li>Cadastre-se</li>
-        </ul>
-    </Nav>
+    <header>
+         <Link to="/">
+                    <img src="{Logo}" alt="Logotipo"/>
+                        </Link>
+        <nav>
+            <ul className={List}>
+                    <li className={item}>
+                    <Link to="Home">Home</Link>
+                    </li>
+                    <li className={item}>
+                    <Link to="Sobre">Sobre</Link>
+                    </li>
+                    <li className={item}>
+                    <Link to="Cadastro">Cadastrar-se</Link>
+                    </li>
+                    <li className={item}>
+                    <Link to="Contato">Contato</Link>
+                    </li>
+            </ul>
+        </nav>
+    </header>
     );
 };
 

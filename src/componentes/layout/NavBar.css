@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(214, 130, 165);
+    padding: 1em;
+}
+.list{
+    display:flex;
+    list-style: none;
+    align-items: center;
+}
+.item a {
+    margin-right: 1em;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+.item :hover {
+    color: rgb(99, 4, 48);
+}
+.logo{
+    width: 100px;
+}

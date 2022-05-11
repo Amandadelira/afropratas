@@ -3,20 +3,23 @@
     justify-content: space-between;
     background-color: rgb(235, 180, 203);
     padding: 1em;
+    align-items: center;
+    
 }
 .list{
     display:flex;
-    list-style: none;
+    justify-content: space-between;
+    list-style-type: none;
     align-items: center;
 }
 .item a {
     margin-right: 1em;
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
     text-decoration: none;
 }
 .item :hover {
     color: rgb(99, 4, 48);
 }
 .logo{
-    width: 100px;
+    width: 70px;
 }

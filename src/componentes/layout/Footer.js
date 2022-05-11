@@ -4,11 +4,11 @@ import {FaFacebook, FaInstagram} from 'react-icons/fa'
 function Footer () {
   return (
     <footer className="footer">
-      <ul>
-        <li className="list">
+      <ul className="social_list svg">
+        <li className="social_list">
           <FaFacebook />
         </li>
-        <li className="list">
+        <li className="social_list">
           <FaInstagram/>
         </li>
       </ul>

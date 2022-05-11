@@ -1,14 +1,14 @@
 import {Link} from 'react-router-dom'
 //import Container from './Container'
 import './NavBar.css'
-import logo from '../../assets/img/Logo.png'
+import logo from '../../assets/img/Logo1.png'
 
 function NavBar () {
     return(
     <header className="header">
-         <Link to="/">
+        <Link to="/">
                     <img src={logo} className="logo" alt="Logotipo"/>
-                        </Link>
+        </Link>
         <nav>
             <ul className="list">
                     <li className="item">

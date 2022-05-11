@@ -1,0 +1,27 @@
+.footer{
+    background-color: #ddc7c7;
+    color: rgb(0, 0, 0);
+    padding: 3em;
+    text-align: center;
+
+}
+.list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 1em;
+}
+.list :hover{
+    color: rgb(99, 4, 48);
+}
+.list svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.copy_right{
+    margin-top: 2em;
+}
+.copy_right{
+    font-weight: bold;
+    color: rgb(99, 4, 48);
+}

@@ -1,7 +1,7 @@
-import styles from './Container.css'
+import "../layout/Container.css"
 
 function Container (props) {
-    return <div className={`${styles.container} ${styles[props.customClass]}`}>
+    return <div className="conatiner">
         {props.children}
     </div>
     

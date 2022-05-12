@@ -6,7 +6,7 @@ function Menu() {
     <div>
                <Link to="/home">Home</Link>
                <Link to="/cadastro">Cadastre-se</Link>
-               <Link to="/logar">Logar</Link>
+               <Link to="/login">Logar</Link>
     </div>
   )
 }

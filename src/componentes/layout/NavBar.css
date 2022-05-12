@@ -1,8 +1,8 @@
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(235, 180, 203);
-    padding: 1em;
+    background-color: rgb(243, 208, 222);
+    padding: 2em;
     align-items: center;
     
 }
@@ -11,6 +11,7 @@
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
+    padding: 2em;
 }
 .item a {
     margin-right: 1em;
@@ -21,5 +22,18 @@
     color: rgb(99, 4, 48);
 }
 .logo{
-    width: 70px;
+    width: 50px;
+
+}
+
+.barra {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgb(231, 224, 224);
+    align-items: center;
+}
+.container{
+    display:flex;
+    flex-grow: 1;
 }

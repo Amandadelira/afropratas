@@ -13,7 +13,7 @@ function Footer () {
         </li>
       </ul>
       <p className="copy_right">
-        <span>Afropratas</span> &copy; 2022
+        <span>Todos Direitos Autorizados por Amanda De Lira </span> &copy; Afropratas 2022
       </p>
     </footer>
   )

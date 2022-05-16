@@ -2,12 +2,11 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './componentes/pages/Home'
 import Cadastro from './componentes/pages/Cadastro'
 import Login from './componentes/pages/Login'
-import Container from './componentes/layout/Container'
 import LayoutDefault from './componentes/pages/LayoutDefault'
 
 function App() {
  return (
-   <Container customClass="min-height">
+
             <Routes>
                <Route path="/" element={<LayoutDefault />} >
                   <Route path="/home" element={<Home />} />
@@ -15,7 +14,6 @@ function App() {
                   <Route path="/login" element={<Login />} />
                </Route>
              </Routes>
-   </Container>
    
  )
 }

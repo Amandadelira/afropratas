@@ -1,8 +1,8 @@
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: rgb(243, 208, 222);
-    padding: 2em;
+    background-color: rgba(250, 148, 189, 0.973);
+    padding: 1em;
     align-items: center;
     
 }
@@ -11,7 +11,8 @@
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
-    padding: 2em;
+    padding: 1em;
+    font-size: 20px;
 }
 .item a {
     margin-right: 1em;
@@ -19,21 +20,37 @@
     text-decoration: none;
 }
 .item :hover {
-    color: rgb(99, 4, 48);
+    color: rgb(255, 255, 255);
 }
 .logo{
     width: 50px;
 
 }
-
 .barra {
-    display: flex;
-    flex-grow: 1;
     width: 100%;
-    background-color: rgb(231, 224, 224);
-    align-items: center;
+    background-color: rgb(255, 255, 255);
 }
-.container{
-    display:flex;
-    flex-grow: 1;
+.coluna_b{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1mm 1mm;
+}
+.inauguração{
+    width: 20px;  
+}
+.veja{
+    width: 20px;
+}
+.mapa{
+    width: 20px;
+}
+.col-4 a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.col-4 a span{
+    margin-left: 8px ;
+    color:black
 }

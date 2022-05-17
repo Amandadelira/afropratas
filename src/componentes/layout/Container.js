@@ -5,10 +5,17 @@ import entrada from '../../assets/img/entrada.jpg'
 function Container (props) {
     return <div className="container">
         {props.children}
-    <Link to="/">
-        <img src={entrada} className="entrada" alt="fotoprincipal" />
-    </Link>
-
+        <div className="figure">
+        <Link to="/">
+            <img src={entrada} className="entrada" alt="fotoprincipal" height="820" />
+            <label className="titulo">Bem Vindo a Afropratas!</label>
+        </Link>
+        </div>
+        <div className="coluna_p">
+            <div className="col-12 ">
+                <span>Produtos</span>
+            </div>
+        </div>
     </div>
 }
 export default Container

@@ -1,7 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(250, 148, 189, 0.973);
+    background-color: rgba(211, 24, 99, 0.973);
     padding: 1em;
     align-items: center;
     
@@ -13,6 +13,7 @@
     align-items: center;
     padding: 1em;
     font-size: 20px;
+    font-weight: bold;
 }
 .item a {
     margin-right: 1em;
@@ -20,7 +21,7 @@
     text-decoration: none;
 }
 .item :hover {
-    color: rgb(255, 255, 255);
+    color: rgb(209, 208, 208);
 }
 .logo{
     width: 50px;
@@ -28,7 +29,7 @@
 }
 .barra {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(209, 208, 208);
 }
 .coluna_b{
     display: flex;

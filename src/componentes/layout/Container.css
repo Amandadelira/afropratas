@@ -1,9 +1,9 @@
 .container{
-    width: 1550px;
+    width: 100%;
     justify-content: space-between;
     margin: auto;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.973);
+    background-color: rgba(230, 89, 89, 0.973);
 }
 
 .min-height{
@@ -17,9 +17,10 @@
     justify-content: flex-start;
 }
 .entrada{
-    margin-left: auto;
-    margin-right: auto;
+    background-size: 100%;
+    float:left;
     width:100% ;
+    height: 100%;
 }
 .coluna_p{
     background-color:rgba(0, 0, 0, 0.973);
@@ -33,14 +34,29 @@
     padding: 1mm 1mm;
 }
 .title{
-    color:aliceblue
+    color:aliceblue;
+    font-size: 45px;
+
 }
 .figure{
     position:relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../../assets/img/entrada1.jpg");
+    background-blend-mode: darken;
+    background-size: cover;
+    width:100% ;
+    height: 600px;
 }
 .label{
     position:absolute;
     top: 145px;
     right: 20px;
+}
+.subtext{
+    color:#ffff;
+    font-size: 18px;
+    text-decoration: underline overline;
 }

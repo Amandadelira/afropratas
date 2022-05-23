@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "1109b544-1110-4b49-b5ee-3c4a5a8ee2e7",
+    "colId": "history",
+    "containerId": "",
+    "name": "https//localhost/afropratas-back-end/estudosapi/user/selec-all",
+    "url": "https//localhost/afropratas-back-end/estudosapi/user/selec-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-05-23T17:46:21.740Z",
+    "modified": "2022-05-23T17:46:24.047Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "e1ee6348-562c-4bf2-a86d-300e6905403c",
+    "colId": "history",
+    "containerId": "",
+    "name": "https//localhost/afropratas-back-end/estudoapi/user/selec-all",
+    "url": "https//localhost/afropratas-back-end/estudoapi/user/selec-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-05-23T19:20:39.957Z",
+    "modified": "2022-05-23T19:20:42.267Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "714a815e-b69e-4839-83d2-c2f06d3ae1b9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http//localhost/afropratas-back-end/estudoapi/user/selec-all",
+    "url": "http//localhost/afropratas-back-end/estudoapi/user/selec-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-05-23T19:20:51.113Z",
+    "modified": "2022-05-23T19:20:53.423Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

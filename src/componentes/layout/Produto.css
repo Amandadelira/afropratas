@@ -1,0 +1,118 @@
+.produto{
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.info{
+    display: flex;
+}
+
+.info_produ{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.produ_imagem{
+    background-color: brown;
+    height: 400px;
+    width: 350px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+
+.butoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buton1{
+    text-decoration: none;
+    width: 280px;
+    color: white;
+    padding: 15px 0;
+    background-color: #EB2525;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+} 
+
+.buton2{
+    text-decoration: none;
+    width: 280px;
+    color: white;
+    padding: 15px 0;
+    background-color: #fa8080;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+}  
+
+.produ_nome{
+    padding: 0;
+    margin: 0;
+}
+
+.produ_valor{
+    padding-left: 14px;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.produ_parcela{
+    padding-left: 14px; 
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.produ_quantidade{
+    padding-left: 14px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quantidade_produ{
+    padding-left: 14px;
+    font-size: 17px;
+}
+
+.quantidade_de_produto input{
+    width:  150px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #757575;
+}
+
+.descricao{
+    margin-top: 45px;
+    margin-left: 100px;
+}
+
+.produ_descricao{
+    background-color: #fafafa;
+    height: 350px;
+    width: 1050px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.descricao h3{
+    font-size: 35px;
+}
+
+.produ_descricao p{
+    font-size: 20px;
+}
+
+.arrow_left{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}

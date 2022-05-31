@@ -18,15 +18,6 @@ const Produto = () => {
                 console.log(data)});
     }, [hqId]);
 
-   /* const {numItens, idItens, setNumItens, setIdItens} = useCarrinho()
-
-    function addCarrinho(id) {
-        setNumItens(numItens + 1)
-        console.log(numItens)
-        // const newArray = idItens.push(id)
-        setIdItens([...idItens, id])
-    } */
-
   return (
     <>
         {hq ? (

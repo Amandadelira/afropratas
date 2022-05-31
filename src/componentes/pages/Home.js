@@ -1,5 +1,8 @@
+import ListaDeProdutos from "../ListaDeProdutos"
 function Home() {
-    return <h1>Home</h1> 
+    return (
+        <ListaDeProdutos />
+    )
 }
 
 export default Home

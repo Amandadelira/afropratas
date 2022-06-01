@@ -2,7 +2,7 @@ import "../layout/Container.css"
 
 function Container (props) {
     return <div className="container">
-        {props.children}
+        
         <div className="figure">
         
             <span>
@@ -10,11 +10,8 @@ function Container (props) {
             <p className="subtext">A maior Distribuidora de pratas do litoral Norte</p>
             </span>
         </div>
-        <div className="coluna_p">
-            <div className="col-12 ">
-                <span>Produtos</span>
-            </div>
-        </div>
+       
+        {props.children}
     </div>
 }
 export default Container

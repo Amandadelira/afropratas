@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import {Card} from "react-bootstrap";
+import { Card, Row,Col, CardGroup } from "react-bootstrap";
+import './ListaDeProduto.css';
 
 const ListaDeProdutos = () => {
   const [products, setProducts] = useState(null);
@@ -18,28 +19,38 @@ const ListaDeProdutos = () => {
             <span>Produtos</span>
           </div>
         </div>
+        </div>
         {products &&
           products.map((product) => {
             return (
-              <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-              // <div key={product.id}>
-              //   <img src={product.photo} alt={product.title} />
-              //   <h1>{product.title}</h1>
-              //   <p>{product.price}</p>
-              // </div>
+              <>
+              <Row>
+                <Col className="car" xs={12} lg={4}>
+                  <CardGroup >
+                    <Card>
+                      <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
+                      <Card.Body>
+                        <Card.Title><h1>{product.title}</h1></Card.Title>
+                        <Card.Text className="titulis">
+                          <p>{product.price}</p>
+                          Arcão para as mulheres
+                          <br/>
+                          ficaremn belas e charmosas
+                          <br/>
+                          para a revoada!!!!
+                          <br/>
+                          Bololo bora lá!!!
+                        </Card.Text>
+                      </Card.Body>
+                    </Card>                
+                  </CardGroup>                
+                </Col>
+              </Row>
+
+              </>
             )
           })
         }
-      </div>
     </>
   )
 }

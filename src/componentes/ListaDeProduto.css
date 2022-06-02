@@ -1,0 +1,9 @@
+.cardis{
+    width: 180px;
+    border-radius: 25px;
+}
+
+.car{
+    display: flex;
+    justify-content: center;
+}

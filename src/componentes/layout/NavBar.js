@@ -48,16 +48,19 @@ function NavBar() {
 </nav>
       </div>
       <header className="header">
-        <Link to="/">
-          <img src={logo} className="logo" alt="Logotipo" />
-        </Link>
+          <div className="logoname">
+            <Link to="/">
+              <img src={logo} className="logo" alt="Logotipo" />
+            </Link>
+            <h1>Afropratas.</h1>
+          </div>
         <nav>
           <ul className="list">
             <li className="item">
               <Link to="/home">Home</Link>
             </li>
             <li className="item">
-              <Link to="/cadastro">Cadastre-se</Link>
+            <Link to="/cadastro">Cadastre-se</Link>
             </li>
             <li className="item">
               <Link to="/login">Logar</Link>

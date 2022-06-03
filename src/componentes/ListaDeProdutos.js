@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, Row,Col, CardGroup } from "react-bootstrap";
+import desejo from "../assets/img/desejo.svg";
 import './ListaDeProduto.css';
 
 const ListaDeProdutos = () => {
@@ -24,27 +25,21 @@ const ListaDeProdutos = () => {
           products.map((product) => {
             return (
               <>
-              <Row>
-                <Col className="car" xs={12} lg={4}>
+              <Row className="col">
+                <div class="col">
                   <CardGroup >
                     <Card>
+                    <img src={desejo} className="coração" alt="icone" />
                       <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
-                      <Card.Body>
+                      <Card.Body className="textinho">
                         <Card.Title><h1>{product.title}</h1></Card.Title>
                         <Card.Text className="titulis">
                           <p>{product.price}</p>
-                          Arcão para as mulheres
-                          <br/>
-                          ficaremn belas e charmosas
-                          <br/>
-                          para a revoada!!!!
-                          <br/>
-                          Bololo bora lá!!!
                         </Card.Text>
                       </Card.Body>
                     </Card>                
                   </CardGroup>                
-                </Col>
+                </div>
               </Row>
 
               </>

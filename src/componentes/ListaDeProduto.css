@@ -1,9 +1,18 @@
 .cardis{
-    width: 180px;
+    width: 185px;
     border-radius: 25px;
 }
 
-.car{
+.col{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4em;
+    flex-direction: row;
+}
+.coração{
+    cursor: pointer;
+}
+.textinho{
+    text-align: center;
 }

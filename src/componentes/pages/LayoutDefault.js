@@ -6,9 +6,7 @@ const LayoutDefault = () => {
     return (
         <>
             <NavBar />
-            <Container customClass="min-height">
                 <Outlet />
-            </Container>
             <Footer />
         </>
     )

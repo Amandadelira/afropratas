@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Row,Col, CardGroup } from "react-bootstrap";
+import { Card, Row,Col} from "react-bootstrap";
 import desejo from "../assets/img/desejo.svg";
 import './ListaDeProduto.css';
 
@@ -20,32 +20,25 @@ const ListaDeProdutos = () => {
             <span>Produtos</span>
           </div>
         </div>
-        </div>
+      </div>
+      <div class="listadeprodutos">
         {products &&
           products.map((product) => {
             return (
-              <>
-              <Row className="col">
-                <div class="col">
-                  <CardGroup >
-                    <Card>
-                    <img src={desejo} className="coração" alt="icone" />
-                      <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
-                      <Card.Body className="textinho">
-                        <Card.Title><h1>{product.title}</h1></Card.Title>
-                        <Card.Text className="titulis">
-                          <p>{product.price}</p>
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>                
-                  </CardGroup>                
-                </div>
-              </Row>
-
-              </>
+                  <Card class="card">
+                    <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
+                    <Card.Body className="textinho">
+                      <div class="texto">
+                          <Card.Title><h1>{product.title}</h1></Card.Title>
+                          <img src={desejo} className="coracao" alt="icone" />
+                      </div>
+                      <p>{product.price}</p>
+                    </Card.Body>
+                  </Card>                               
             )
           })
         }
+      </div>
     </>
   )
 }

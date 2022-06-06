@@ -1,18 +1,33 @@
 .cardis{
-    width: 185px;
-    border-radius: 25px;
+    width: 100%;
+    height:270px;
+    border-radius: 30px;
+    object-fit:cover
 }
-
-.col{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4em;
-    flex-direction: row;
-}
-.coração{
+.coracao{
     cursor: pointer;
 }
 .textinho{
-    text-align: center;
+    text-align: start;
+    font-size: 16px;
+    padding: 0 10px;
+}
+.listadeprodutos{
+    margin: 20px auto;
+    width: 80%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width:340px;
+    height:330px;
+    margin-right:20px;
+    margin-left:30px;
+    margin-top:30px;
+}
+.texto{
+    display: flex;
+    justify-content:space-between;
 }

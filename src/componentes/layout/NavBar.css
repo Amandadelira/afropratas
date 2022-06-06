@@ -16,9 +16,10 @@
     font-weight: bold;
 }
 .item a {
-    margin-right: 1em;
+    margin-right: 2em;
     color:rgb(0, 0, 0);
     text-decoration: none;
+    text-align:center;
 }
 .item :hover {
     color: rgb(216, 79, 109);
@@ -62,4 +63,16 @@
     display:flex;
     justify-content: space-between;
     padding: 1em;
+}
+.iconhome{
+    cursor:pointer;
+    width:25px;
+}
+.iconlogin{
+    cursor:pointer;
+    width:25px;
+}
+.iconcadastro{
+    cursor:pointer;
+    width:25px;
 }

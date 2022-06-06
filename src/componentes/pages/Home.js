@@ -1,7 +1,12 @@
 import ListaDeProdutos from "../ListaDeProdutos"
+import Container from '../layout/Container';
+
 function Home() {
     return (
-        <ListaDeProdutos />
+        <>
+            <Container />
+            <ListaDeProdutos />
+        </>
     )
 }
 

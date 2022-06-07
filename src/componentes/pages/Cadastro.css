@@ -1,0 +1,35 @@
+.fundo{
+    background-color: rgb(187, 187, 187);
+    margin: 20px auto;
+    width: 446px;;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+}
+.geral{ 
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+    margin-block-end: 50px;
+    flex-wrap: wrap;
+    font-size: 28px;
+}
+.button{
+    background-color: #DA9C9C;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 180px;
+    height:35px;
+}
+.termos{
+    font-size: 15px;
+}
+.ajustebutton{
+    width: 100%;
+}
+.retangulo{
+    width: 250px;
+    height: 20%;
+}

@@ -1,0 +1,20 @@
+.fundo2{
+    margin: 20px auto;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.336);
+    display: flex;
+    justify-content: space-between;
+}
+.cardin{
+    width: 350px;
+    height: 500px;
+    background-color:aquamarine;
+    margin-block-end: 29px;
+}
+.barrin{
+    background-color: black;
+}
+.foto{
+    width: 80%;
+    height: 80%;
+}

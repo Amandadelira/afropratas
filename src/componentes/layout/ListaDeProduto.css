@@ -15,7 +15,7 @@
 .listadeprodutos{
     margin: 20px auto;
     width: 80%;
-    background-color: aquamarine;
+    background-color: rgba(255, 255, 255, 0.336);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

@@ -52,7 +52,7 @@ function NavBar() {
           <ul className="list">
             <li className="item">
               <Link to="/home">
-              <img src={home} className="iconhome" alt="icon" />Home</Link>
+              <img src={home} className="iconhome" alt="icon" />Afro-Joias</Link>
             </li>
             <li className="item">
               <Link to="/cadastro">

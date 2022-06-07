@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Card, Row,Col} from "react-bootstrap";
-import desejo from "../assets/img/desejo.svg";
+import { Card} from "react-bootstrap";
+import desejo from "../../assets/img/desejo.svg";
 import './ListaDeProduto.css';
 
 const ListaDeProdutos = () => {

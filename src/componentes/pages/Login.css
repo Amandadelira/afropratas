@@ -1,0 +1,29 @@
+.fundo1{
+    background-color: rgb(187, 187, 187);
+    margin: 20px auto;
+    width: 55%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 50px;
+}
+.geral1{ 
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 50px;
+    margin-block-end: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 28px;
+}
+.button{
+    background-color: #DA9C9C;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 180px;
+    height:35px;
+}
+.termos{
+    font-size: 15px;
+}

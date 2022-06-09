@@ -1,134 +1,55 @@
-import React from 'react';
-import { Formik } from 'formik'; //npm install formik --save
-import * as Yup from 'yup';//npm install -S yup
-import { Form, InputGroup, Row, Col, Button } from "react-bootstrap";
+import {useRef, useEffect} from 'react'
 import "./Cadastro.css";
+const FormCadastro = ({Cadastro, setCadastro}) => {
+  const nameRef = useRef();
+  const lastNameRef = useRef();
+  const emailRef = useRef();
+  const cpfRef = useRef();
+  const passwordRef = useRef();
 
-//const { formik } = Formik;
+  useEffect(() => {
+    nameRef.current.focus()
+  },[])
 
-const schema = Yup.object().shape({
-  Name: Yup.string().required(),
-  LatsName: Yup.string().required(),
-  email: Yup.string().required(),
-  cpf: Yup.string().min(11,'minimo 11 numeros').required(),
-  pass: Yup.string().required(),
-  terms: Yup.bool().required().oneOf([true], 'Aceite os Termos'),
-});
 
-function Cadastro() {
-  return (
-    <>
-    <div className="fundo">
-      <Formik
-        validationSchema={schema}
-        onSubmit={console.log}
-        initialValues={{
-          Name: '',
-          LastName: '',
-          email: '',
-          cpf: '',
-          pass: '',
-          terms: false,
-        }}
-      >
-        {({
-          handleSubmit,
-          handleChange,
-          values,
-          touched,
-          errors,
-        }) => (
-        <div className="geral">
-          <Form noValidate onSubmit={handleSubmit}>
-            <Row>
-              <Form.Group as={Col} md="4" controlId="validationFormik01">
-                <Form.Label>Nome</Form.Label><br/>
-                <Form.Control className="retangulo"
-                  type="text"
-                  placeholder="Digite seu nome"
-                  name="Name"
-                  value={values.Name}
-                  onChange={handleChange}
-                  isValid={touched.Name && !errors.Name}
-                />
-              </Form.Group>
-              <Form.Group as={Col} md="4" controlId="validationFormik01">
-                <Form.Label>Sobrenome</Form.Label><br/>
-                <Form.Control className="retangulo"
-                  type="text"
-                  placeholder="Digite seu sobrenome"
-                  name="LastName"
-                  value={values.LastName}
-                  onChange={handleChange}
-                  isValid={touched.Name && !errors.Name}
-                />
-              </Form.Group>
-              <Form.Group as={Col} md="4" controlId="validationFormik02">
-                <Form.Label>E-mail</Form.Label><br/>
-                <Form.Control className="retangulo"
-                  type="text"
-                  placeholder="Informe um email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  isValid={touched.email && !errors.email}
-                />
-              </Form.Group>
-              <Form.Group as={Col} md="2" controlId="validationFormikcpf">
-                <Form.Label>CPF</Form.Label><br/>
-                <InputGroup hasValidation>
-                  <Form.Control className="retangulo"
-                    type="text"
-                    placeholder="Digite um cpf valido"
-                    aria-describedby="inputGroupPrepend"
-                    name="cpf"
-                    value={values.cpf}
-                    onChange={handleChange}
-                    isInvalid={!!errors.cpf}
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Row>
-            <Row>
-              <Form.Group as={Col} md="2" controlId='validationFormikpass'>
-                <Form.Label>Senha</Form.Label><br/>
-                <Form.Control className="retangulo"
-                  type="text"
-                  placeholder='Crie uma senha'
-                  name='pass'
-                  value={values.pass}
-                  onChange={handleChange}
-                  isInvalid={!!errors.pass}
-                />
-              </Form.Group>
-            </Row>
-            <Form.Group className="mb-3">
-              <div className="termos">
-                <Form.Check
-                  required
-                  name="terms"
-                  label="Li e estou de Acordo com as Condições dos Termos "
-                  onChange={handleChange}
-                  isInvalid={!!errors.terms}
-                  feedback={errors.terms}
-                  feedbackType="invalid"
-                  id="validationFormik0"
-                />
-              </div>
-            </Form.Group>
-          </Form>
-          <div className="ajustebutton">
-            <Button type="submit" className="button">
-              <span>Cadastrar-me</span>
-            </Button>
-          </div>
+    const handleSubmit = (event) => {
+      event.preventDefault()
+      const formData = new FormData();
+      formData.append('name', event.target[0].value);
+      formData.append('lastName', event.target[1].value);
+      formData.append('email', event.target[2].value);
+      formData.append('cpf', event.target[2].value);
+      formData.append('password', event.target[2].value);
+      fetch(
+        "http://localhost/afropratas-back-end/api/user/create",
+        {method: 'POST', body: formData}
+        )
+        .then((response) => response.json())
+        .then((data) => {
+        nameRef.current.value = ''
+        lastNameRef.current.value = ''
+        emailRef.current.value = ''
+        cpfRef.current.value = ''
+        passwordRef.current.value = ''
+        nameRef.current.focus()
+          setCadastro([data.cadastro ,...Cadastro])
+        });
+    }
+
+    return(
+    <div className="fundo2">
+        <div className="geral1">
+            <form onSubmit={(event) => handleSubmit(event)}>
+                <label className="titulof">Nome:</label><input className="retangulo1" ref={nameRef} type="text" name="name" placeholder="Digite seu nome"/>
+                <label className="titulof">Sobrenome:</label><input className="retangulo1"ref={lastNameRef} type="lastName" name="LastName" placeholder="Digite seu sobrenome"/>
+                <label className="titulof">Email:</label><input className="retangulo1" ref={emailRef} type="email" name="email" placeholder="Informe um email"/>
+                <label className="titulof">CPF:</label><input className="retangulo1"ref={cpfRef} type="cpf" name="cpf" placeholder="Digite um cpf valido"/>
+                <label className="titulof">Senha:</label><input className="retangulo1" ref={passwordRef} type="password" name="pass"placeholder='Crie uma senha'/>
+                <input className="button1" type="submit" value="Cadastrar-me"/>
+            </form>
         </div>
-        )}
-      </Formik>
     </div>
-    </>
-  );
+    )
 }
 
-
-export default Cadastro
+export default FormCadastro

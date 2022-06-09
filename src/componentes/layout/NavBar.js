@@ -12,24 +12,24 @@ function NavBar() {
   return (
     <>
       <div className="barra">
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="row justify-content-start">
+<nav className="navbar navbar-expand-lg">
+  <div className="container-fluid">
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <div className="row justify-content-start">
         <div className="coluna_b">
-          <div class="col-4 ">
+          <div className="col-4 ">
           <Link to="/">
           <img src={inauguração} className="inauguração" alt="surpresa" />
           <span>Inauguração em breve</span>
         </Link>
           </div>
-          <div class="col-4">
+          <div className="col-4">
           <Link to="/">
           <img src={veja} className="veja" alt="veja" />
           <span>Veja os produtos que serão lançados</span>
         </Link>
           </div>
-          <div class="col-4">
+          <div className="col-4">
           <Link to="/">
           <img src={mapa} className="mapa" alt="mapa" />
           <span>Visualize nossa loja em sua cidade</span>

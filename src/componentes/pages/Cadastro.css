@@ -1,4 +1,4 @@
-.fundo{
+.fundo2{
     background-color: rgb(187, 187, 187);
     margin: 20px auto;
     width: 446px;;
@@ -8,28 +8,29 @@
     flex-wrap: wrap;
     border-radius: 50px;
 }
-.geral{ 
+.retangulo1{
+    width: 260px;
+    height: 5%;
+}
+.geral1{ 
     justify-content: space-between;
     width: 80%;
     margin-top: 50px;
     margin-block-end: 50px;
     flex-wrap: wrap;
-    font-size: 28px;
+    font-size: 20px;
+    align-items: flex-start;
 }
-.button{
+.button1{
     background-color: #DA9C9C;
     font-size: 18px;
     border-radius: 20px;
     width: 180px;
     height:35px;
 }
-.termos{
+.titulof{
+    font-size: 20px;
+}
+.termosf{
     font-size: 15px;
-}
-.ajustebutton{
-    width: 100%;
-}
-.retangulo{
-    width: 250px;
-    height: 20%;
 }

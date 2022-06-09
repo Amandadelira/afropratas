@@ -21,14 +21,14 @@ const ListaDeProdutos = () => {
           </div>
         </div>
       </div>
-      <div class="listadeprodutos">
+      <div className="listadeprodutos">
         {products &&
           products.map((product) => {
             return (
-                  <Card class="card">
+                  <Card className="card">
                     <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
                     <Card.Body className="textinho">
-                      <div class="texto">
+                      <div className="texto">
                           <Card.Title><h1>{product.title}</h1></Card.Title>
                           <img src={desejo} className="coracao" alt="icone" />
                       </div>

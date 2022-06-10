@@ -1,8 +1,8 @@
-.fundo2{
+.fundo3{
     background-color: rgb(187, 187, 187);
     margin: 20px auto;
     width: 446px;;
-    height: 550px;
+    height: 500px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -11,6 +11,7 @@
 .retangulo1{
     width: 260px;
     height: 5%;
+    display: flex;
 }
 .geral1{ 
     justify-content: space-between;

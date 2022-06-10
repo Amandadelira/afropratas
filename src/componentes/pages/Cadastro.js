@@ -37,7 +37,7 @@ const FormCadastro = ({Cadastro, setCadastro}) => {
     }
 
     return(
-    <div className="fundo2">
+    <div className="fundo3">
         <div className="geral1">
             <form onSubmit={(event) => handleSubmit(event)}>
                 <label className="titulof">Nome:</label><input className="retangulo1" ref={nameRef} type="text" name="name" placeholder="Digite seu nome"/>

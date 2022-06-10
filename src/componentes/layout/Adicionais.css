@@ -6,8 +6,8 @@
     justify-content: space-between;
 }
 .cardin{
-    width: 450px;
-    height:570px;
+    width: 374px;
+    height:524px;
     object-fit:cover;
     background-image: url("https://images.pexels.com/photos/10143573/pexels-photo-10143573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") ;
     background-repeat: no-repeat;

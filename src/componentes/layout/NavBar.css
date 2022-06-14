@@ -83,3 +83,7 @@
     justify-content: space-around;
     padding: 1mm 1mm;
 }
+.iconlogout{
+    cursor:pointer;
+    width:25px;
+}

@@ -8,7 +8,18 @@ import mapa from '../../assets/img/mapa.png'
 import home from '../../assets/img/home.svg'
 import login from '../../assets/img/login.svg'
 import cadastro from '../../assets/img/cadastro.svg'
+import { useAuth } from "../../provides/authProvider"
+import logout from '../../assets/img/logout.png'
+
 function NavBar() {
+  const {isLogged, userLogged, setIsLogged, setUserLogged} = useAuth();
+
+  const logout = () => {
+    setIsLogged(false)
+    setUserLogged({})
+    localStorage.removeItem('userLogged')
+  }
+
   return (
     <>
       <div className="barra">
@@ -54,6 +65,17 @@ function NavBar() {
               <Link to="/home">
               <img src={home} className="iconhome" alt="icon" />Afro-Joias</Link>
             </li>
+
+            { isLogged 
+          ? (
+              <>
+            <li className="item">
+                 <button onClick={logout} className="iconlogout" alt="icon" >Sairnpm </button>
+            </li>
+              </>
+          )
+          : (
+            <>
             <li className="item">
               <Link to="/cadastro">
                <img src={cadastro} className="iconcadastro" alt="icon" />Cadastre-se
@@ -63,6 +85,9 @@ function NavBar() {
               <Link to="/login">
                  <img src={login} className="iconlogin" alt="icon" />Logar</Link>
             </li>
+            </>
+          )
+        }
           </ul>
         </nav>
       </header>

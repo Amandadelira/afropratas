@@ -1,75 +1,65 @@
-import React from 'react';
-import { Formik } from 'formik'; //npm install formik --save
-import * as Yup from 'yup';//npm install -S yup
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { useRef, useEffect } from "react";
+import { useAuth } from "../../provides/authProvider";
 import "./Login.css";
+const Login = () => {
 
-//const { formik } = Formik;
+    const emailRef = useRef();
+    const passRef = useRef();
 
-const shemas = Yup.object().shape({
-  email: Yup.string().required(),
-  pass: Yup.string().required(),
-});
+    const { setIsLogged, setUserLogged, isLogged, userLogged } = useAuth();
 
-function Login() {
-  return (
-    <>
-    <div className="fundo1">
-      <Formik
-        validationShemas={shemas}
-        onSubmit={console.log}
-        initialValues={{
-          email: '',
-          pass: '',
-          terms: false,
-        }}
-      >
-        {({
-          handleSubmit,
-          handleChange,
-          handleBlur,
-          values,
-          touched,
-          isValid,
-          errors,
-        }) => (
-        <div className="geral1">
-          <Form noValidate onSubmit={handleSubmit}>
-            <Row>
-              <Form.Group as={Col} md="4" controlId="validationFormik02">
-                <Form.Label>E-mail</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Informe um email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  isValid={touched.email && !errors.email}
-                />
-              </Form.Group>
-            </Row>
-            <Row>
-              <Form.Group as={Col} md="2" controlId='validationFormikpass'>
-                <Form.Label>Senha</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder='Crie uma senha'
-                  name='pass'
-                  value={values.pass}
-                  onChange={handleChange}
-                  isInvalid={!!errors.pass}
-                />
-              </Form.Group>
-            </Row>
-            <Button type="submit" className="button">
-              <span>Entrar</span>
-            </Button>
-          </Form>
+    useEffect(() => {
+        emailRef.current.focus()
+    },[])
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        const formData = new FormData();
+        formData.append('email', event.target[0].value);
+        formData.append('pass', event.target[1].value);
+        fetch(
+          "http://localhost/afropratas-back-end/api/auth/login",
+          {method: 'POST', body: formData}
+        )
+          .then(async (response) => {
+                if(response.status === 200){
+                    let data = await response.json()
+                    setIsLogged(true)
+                    setUserLogged(data.session)
+                    localStorage.setItem('userLogged', JSON.stringify(data.session));
+                } else {
+                    let data = await response.json()
+                    data?.message
+                        ? alert(data.message)
+                        : alert('Erro ao Logar!')
+                }
+            })
+    } 
+
+    return (
+        <>
+        <div className="fundo4">
+            <div className="geral4">
+                <div className="form4">
+                    <form onSubmit={(event) => handleSubmit(event)}>
+                    <label>Email:</label><input className="retangulo4" ref={emailRef} type="email" name="email" placeholder="Informe seu email"/>
+                    <label>Senha:</label><input className="retangulo4" ref={passRef} type="password" name="pass" placeholder="Digite sua senha"/>
+                    <input className="button4"type="submit" value="Logar" />
+                    </form>
+                </div>
+            <h1>User Logged</h1>
+            { isLogged
+                ? (<span>isLogged True</span>)
+                : (<span>isLogged False</span>)
+            }
+            <br />
+            <p>
+                {JSON.stringify(userLogged)}
+            </p>
+            </div>
         </div>
-        )}
-      </Formik>
-    </div>
-    </>
-  );
+        </>
+    )
 }
+
 export default Login

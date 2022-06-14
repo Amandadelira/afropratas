@@ -1,29 +1,28 @@
-.fundo1{
+.fundo4{
     background-color: rgb(187, 187, 187);
     margin: 20px auto;
-    width: 55%;
-    height: 550px;
+    width: 50%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     border-radius: 50px;
 }
-.geral1{ 
+.geral4{ 
     justify-content: space-between;
     width: 60%;
     margin-top: 50px;
     margin-block-end: 50px;
     display: flex;
     flex-wrap: wrap;
-    font-size: 28px;
+    font-size: 22px;
 }
-.button{
+.button4{
     background-color: #DA9C9C;
     font-size: 18px;
     border-radius: 20px;
     width: 180px;
     height:35px;
 }
-.termos{
-    font-size: 15px;
+.retangulo4{
+    width: 270px;
+    display: flex;
 }

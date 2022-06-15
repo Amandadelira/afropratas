@@ -87,3 +87,8 @@
     cursor:pointer;
     width:25px;
 }
+.saida{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

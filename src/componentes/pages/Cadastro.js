@@ -15,11 +15,11 @@ const FormCadastro = ({Cadastro, setCadastro}) => {
     const handleSubmit = (event) => {
       event.preventDefault()
       const formData = new FormData();
-      formData.append('name', event.target[0].value);
-      formData.append('lastName', event.target[1].value);
-      formData.append('email', event.target[2].value);
-      formData.append('cpf', event.target[2].value);
-      formData.append('password', event.target[2].value);
+      formData.append('name',  nameRef.current.value);
+      formData.append('lastName',lastNameRef.current.value);
+      formData.append('email',  emailRef.current.value);
+      formData.append('cpf', cpfRef.current.value);
+      formData.append('password',passwordRef.current.value);
       fetch(
         "http://localhost/afropratas-back-end/api/user/create",
         {method: 'POST', body: formData}

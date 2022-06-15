@@ -9,7 +9,7 @@ import home from '../../assets/img/home.svg'
 import login from '../../assets/img/login.svg'
 import cadastro from '../../assets/img/cadastro.svg'
 import { useAuth } from "../../provides/authProvider"
-import logout from '../../assets/img/logout.png'
+import iconlogout from '../../assets/img/logout.png'
 
 function NavBar() {
   const {isLogged, userLogged, setIsLogged, setUserLogged} = useAuth();
@@ -70,7 +70,10 @@ function NavBar() {
           ? (
               <>
             <li className="item">
-                 <button onClick={logout} className="iconlogout" alt="icon" >Sairnpm </button>
+                <div onClick={logout} className="saida">
+                   <img src={iconlogout} className="iconlogout"  alt="icon"></img>
+                   <span>Sair</span>
+                </div>
             </li>
               </>
           )

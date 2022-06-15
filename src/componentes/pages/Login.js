@@ -6,7 +6,7 @@ const Login = () => {
     const emailRef = useRef();
     const passRef = useRef();
 
-    const { setIsLogged, setUserLogged, isLogged, userLogged } = useAuth();
+    const { setIsLogged, setUserLogged, isLogged } = useAuth();
 
     useEffect(() => {
         emailRef.current.focus()
@@ -37,7 +37,7 @@ const Login = () => {
     } 
 
     return (
-        <>
+        
         <div className="fundo4">
             <div className="geral4">
                 <div className="form4">
@@ -47,18 +47,14 @@ const Login = () => {
                     <input className="button4"type="submit" value="Logar" />
                     </form>
                 </div>
-            <h1>User Logged</h1>
             { isLogged
-                ? (<span>isLogged True</span>)
-                : (<span>isLogged False</span>)
+                ? (<span>Opa, logado!!</span>)
+                : (<span>Ops! ainda não...</span>)
             }
             <br />
-            <p>
-                {JSON.stringify(userLogged)}
-            </p>
             </div>
         </div>
-        </>
+        
     )
 }
 

@@ -8,7 +8,8 @@ import Admin from './componentes/pages/Admin'
 import AuthProvider from './provides/authProvider'
 import CadastraProduto from './componentes/layout/CadastraProduto'
 import EditaProduto from './componentes/layout/EditaProduto'
-function App() {
+
+function Router() {
  return (
    <AuthProvider>
             <Routes>
@@ -16,13 +17,18 @@ function App() {
                   <Route path="/home" element={<Home />} />
                   <Route path="/cadastro" element={<Cadastro />} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/Admin" element={<Admin />} />
-                  <Route path="/cadastra-produto" element={<CadastraProduto />} />
-                  <Route path="/EditaProduto" element={<EditaProduto />} />
                </Route>
-             </Routes>
-   </AuthProvider>
+
+                    <Route path='/admin' element={<Admin />}>
+                        <Route path="edita/:produtoId" element={<EditaProduto />} />
+                        <Route path="/cadastra-produto" element={<CadastraProduto />} />
+                        {/* <Route path="/deleta-produto" element={<DeletaProduto />}/> */}
+                </Route>
+
+                <Route path="*" element={<NotFound />} />
+            </Routes> 
+    </AuthProvider>
  )
 }
 
-export default App;
+export default Router;

@@ -1,5 +1,5 @@
-.fundo3{
-    background-color: rgb(187, 187, 187);
+.fundo6{
+    background-color: rgb(161, 156, 156);
     margin: 20px auto;
     width: 446px;;
     height: 500px;
@@ -8,12 +8,7 @@
     flex-wrap: wrap;
     border-radius: 50px;
 }
-.retangulo1{
-    width: 260px;
-    height: 5%;
-    display: flex;
-}
-.geral1{ 
+.geral6{ 
     justify-content: space-between;
     width: 80%;
     margin-top: 50px;
@@ -22,17 +17,20 @@
     font-size: 20px;
     align-items: flex-start;
 }
-.button1{
-    background-color: #DA9C9C;
+.retangulo6{
+    width: 260px;
+    display: flex;
+}
+.preço{
+    width: 100px;
+    height: 5%;
+    display: flex;
+}
+.button6{
+    background-color: #e07f7f;
     font-size: 18px;
     border-radius: 20px;
     width: 180px;
     height:35px;
     cursor: pointer;
-}
-.titulof{
-    font-size: 20px;
-}
-.termosf{
-    font-size: 15px;
 }

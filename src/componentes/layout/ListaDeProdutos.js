@@ -25,7 +25,7 @@ const ListaDeProdutos = () => {
         {products &&
           products.map((product) => {
             return (
-                  <Card className="card">
+                  <Card className="card" key={product.id}>
                     <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
                     <Card.Body className="textinho">
                       <div className="texto">

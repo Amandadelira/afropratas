@@ -62,7 +62,7 @@ function NavBar() {
         <nav>
           <ul className="list">
             <li className="item">
-              <Link to="/home">
+              <Link to="/">
               <img src={home} className="iconhome" alt="icon" />Afro-Joias</Link>
             </li>
 

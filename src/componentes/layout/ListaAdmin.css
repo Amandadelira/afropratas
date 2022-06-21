@@ -1,12 +1,19 @@
 .barra_create{
     list-style-type: none;
     margin: 0 4em;
-    padding: 1em 0;
+    padding: 1em ;
     font-size: 13px;
     font-weight: bold;
+    display:flex;
+}
+.barra_create a{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2mm;
 }
 .social_create a{
-    font-size: 2.3em;
+    font-size: 2.4em;
     cursor: pointer;
     list-style-type: none;
     margin-right: 2em;
@@ -17,4 +24,11 @@
 .lixeirinha{
     font-size: 2em;
     cursor: pointer;
+}
+.editinho{
+    font-size: 2em;
+    cursor: pointer;
+}
+.social_create svg{
+    font-size: 1.5em;
 }

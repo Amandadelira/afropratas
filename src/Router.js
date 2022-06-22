@@ -9,6 +9,7 @@ import AuthProvider from './provides/authProvider'
 import CadastraProduto from './componentes/pages/CadastraProduto'
 import EditaProduto from './componentes/pages/EditaProduto'
 import LayoutDefaultAdm from './componentes/pages/LayoutDefaultAdm'
+import DeletaProduto from './componentes/pages/DeletaProduto'
 function Router() {
  return (
    <AuthProvider>
@@ -23,7 +24,7 @@ function Router() {
                         <Route index element={<Admin />} />
                         <Route path="edita/:productId" element={<EditaProduto />} />
                         <Route path="cadastra-produto" element={<CadastraProduto />} />
-                        {/* <Route path="/deleta-produto" element={<DeletaProduto />}/> */}
+                        <Route path="deleta-produto/:productId" element={<DeletaProduto />}/>
                 </Route>
 
                 {/* <Route path="*" element={<NotFound />} /> */}

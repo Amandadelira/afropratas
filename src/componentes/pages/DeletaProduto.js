@@ -1,58 +1,27 @@
-import { useEffect, useState } from "react";
-import FormUser from "./FormUser";
-import {BsTrash as IconTrash} from "react-icons/bs"
-import {TiEdit as IconEdit} from 'react-icons/ti'
-import { useNavigate } from 'react-router-dom'
+import {Button, Modal} from 'react-bootstrap';
 
-const DeletaProduto = () => {
-const [users, setUsers] = useState(null);
-const navigate = useNavigate();
+function DeletaProduto(props) {
+  const id = props.id;
+  const deletar = props.deletar;
+  const fechar = props.fechar;
 
-useEffect(() => {
-    fetch("http://localhost/afropratas-back-end/api/product/select-all")
-        .then((response) => response.json())
-        .then((data) => setUsers(data));
-}, []);
-
-const handleTrashClick = (userId) => {
-  const formData = new FormData();
-  formData.append('id', userId);
-  const urlDelete = "http://localhost/afropratas-back-end/api/product/delete";
-  fetch(urlDelete, {
-    method: 'POST',
-    body: formData
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      alert(data.message)
-      const usersFiltered = users.filter((user) => { return user.id !== userId });
-      setUsers(usersFiltered)
-    });
-}
-
-return (
+  return (
     <>
-    <FormUser setUsers={setUsers} users={users}/>
-    {users &&
-      users.map((user) => {
-        return (
-          <div key={user.id}>
-            <h1>{user.name}</h1>
-            <p>{user.email}</p>
-            <IconTrash 
-              onClick={() => handleTrashClick(user.id)}
-              style={{cursor: 'pointer'}}
-            />
-            <IconEdit 
-              onClick={() => navigate('edit/'+user.id)} 
-              style={{cursor: 'pointer'}}
-            />
-          </div>
-        )
-      })
-    }
+      <Modal show={id !== null} onHide={() => fechar()}>
+        <Modal.Header closeButton>
+          <Modal.Title>Deletar Produto</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Quer mesmo deletar este produto??</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => fechar()}>
+            Cancelar
+          </Button>
+          <Button variant="danger" onClick={() => deletar()}>
+            Deletar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
-  )
+  );
 }
-
 export default DeletaProduto

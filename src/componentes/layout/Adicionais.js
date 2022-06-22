@@ -16,14 +16,14 @@ function Adicionais() {
           <div className="dois">
             <Card className="cardinho">
               <div className="tudinhos">
-                <Card.Img variant="top" className="imaginho" src="https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                <Card.Title className="barrin"><span className='titulo'>Correntes</span></Card.Title>
+                <Card.Img variant="top" className="imaginho" src="https://images.pexels.com/photos/10983778/pexels-photo-10983778.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" />
+                <Card.Title className="barrin"><span className='titulo'>Brincos</span></Card.Title>
               </div>
             </Card>
             <Card className="cardinho">
               <div className="tudinhos">
-                <Card.Img variant="top" className="imaginho" src="https://images.pexels.com/photos/691046/pexels-photo-691046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-                <Card.Title className="barrin"><span className='titulo'>Correntes</span></Card.Title>
+                <Card.Img variant="top" className="imaginho" src="https://images.pexels.com/photos/11504786/pexels-photo-11504786.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" />
+                <Card.Title className="barrin"><span className='titulo'>Aneis Solitarios</span></Card.Title>
               </div>
             </Card>
           </div>

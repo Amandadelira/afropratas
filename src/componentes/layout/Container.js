@@ -1,7 +1,7 @@
 import "../layout/Container.css"
 
 function Container (props) {
-    return <div className="container">
+    return <div className="containero">
         
         <div className="figure">
         

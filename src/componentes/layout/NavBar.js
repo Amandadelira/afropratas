@@ -23,9 +23,9 @@ function NavBar() {
   return (
     <>
       <div className="barra">
-<nav className="navbar navbar-expand-lg">
+<nav className="expand-lg">
   <div className="container-fluid">
-    <div className="collapse navbar-collapse" id="navbarNav">
+    <div className="" id="a">
       <div className="row justify-content-start">
         <div className="coluna_b">
           <div className="col-4 ">

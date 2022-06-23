@@ -1,11 +1,14 @@
 import {useRef, useEffect} from 'react'
 import "./Cadastro.css";
+import { useNavigate, Link }from 'react-router-dom'
+
 const FormCadastro = ({Cadastro, setCadastro}) => {
   const nameRef = useRef();
   const lastNameRef = useRef();
   const emailRef = useRef();
   const cpfRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     nameRef.current.focus()
@@ -32,7 +35,8 @@ const FormCadastro = ({Cadastro, setCadastro}) => {
         cpfRef.current.value = ''
         passwordRef.current.value = ''
         nameRef.current.focus()
-          setCadastro([data.cadastro ,...Cadastro])
+          // setCadastro([data.cadastro ,...Cadastro])
+        navigate('/')
         });
     }
 

@@ -1,18 +1,18 @@
 import { useRef, useEffect} from 'react'
 import "./CadastraProduto.css"
-
+import { useNavigate, Link }from 'react-router-dom'
 const CadastraProduto = ({CadastroProduct, setCadastroProdutc}) => {
 
   const titleRef = useRef();
   const photoRef = useRef();
   const priceRef = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     titleRef.current.focus()
   },[])
 
   const handleSubmit = (event) => {
-    console.log('cheguei aqui')
     event.preventDefault()
     const formData = new FormData();
     formData.append('title', titleRef.current.value);
@@ -29,7 +29,8 @@ const CadastraProduto = ({CadastroProduct, setCadastroProdutc}) => {
         photoRef.current.value = ''
         priceRef.current.value = ''
         titleRef.current.focus()
-          // setCadastroProdutc([data.CadastroProduct ,...CadastroProduct])
+        // setCadastroProdutc([data.CadastroProduct ,...CadastroProduct])
+        navigate('/admin')
       });
   } 
 
@@ -39,7 +40,7 @@ const CadastraProduto = ({CadastroProduct, setCadastroProdutc}) => {
       <h1>Cadastrar Produto</h1>
         <form onSubmit={(event) => handleSubmit(event)}>
           <label>Titulo:</label><input className="retangulo6" ref={titleRef} type="text" name="title" placeholder="Informe um Titulo para seu Produto"/>
-          <label>Imagem:</label><input className="retangulo6" ref={photoRef} type="text" name="photo" placeholder="Adicone a url de sua imagem"/>
+          <label>Imagem:</label><input className="retangulo6" ref={photoRef} type="text" name="photo" placeholder="Adicione a url de sua imagem"/>
           <label>Preço:</label><input className="preço"ref={priceRef} type="text" name="price" placeholder="Informe um valor "/>
           <input className="button6" type="submit" value="Cadastrar" />
         </form>

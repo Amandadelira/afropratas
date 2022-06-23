@@ -44,7 +44,7 @@ const ListaDeProdutos = () => {
       <div className="embaixo">
         <div className="coluna_m">
           <div className="col-12 ">
-            <span>Sobre nossas peças</span>
+            <span>Coleções que serão lançadas em breve</span>
           </div>
         </div>
       </div>

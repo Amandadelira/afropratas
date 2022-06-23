@@ -10,14 +10,16 @@ import login from '../../assets/img/login.svg'
 import cadastro from '../../assets/img/cadastro.svg'
 import { useAuth } from "../../provides/authProvider"
 import iconlogout from '../../assets/img/logout.png'
+import { useNavigate }from 'react-router-dom'
 
 function NavBar() {
   const {isLogged, userLogged, setIsLogged, setUserLogged} = useAuth();
-
+  const navigate = useNavigate();
   const logout = () => {
     setIsLogged(false)
     setUserLogged({})
     localStorage.removeItem('userLogged')
+    navigate('/')
   }
 
   return (

@@ -9,7 +9,7 @@
 }
 .textinho{
     text-align: start;
-    font-size: 16px;
+    font-size: 12px;
     padding: 0 10px;
 }
 .listadeprodutos{
@@ -34,13 +34,11 @@
     justify-content:space-between;
 }
 .coluna_m{
-    background-color:rgba(223, 106, 135, 0.973);
+    background-color:rgba(235, 151, 172, 0.973);
     color:rgb(0, 0, 0);
     text-align: center;
     font-weight: bold;
- 
     font-size: 35px;
-
 }
 .descri{
     display: flex;
@@ -48,4 +46,7 @@
 }
 .card-title{
     margin-left: 12px;
+}
+.valor{
+    font-size: 17px;
 }

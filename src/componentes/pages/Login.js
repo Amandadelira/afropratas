@@ -1,11 +1,12 @@
 import { useRef, useEffect } from "react";
 import { useAuth } from "../../provides/authProvider";
 import "./Login.css";
+import { useNavigate }from 'react-router-dom'
 const Login = () => {
 
     const emailRef = useRef();
     const passRef = useRef();
-
+    const navigate = useNavigate();
     const { setIsLogged, setUserLogged, isLogged } = useAuth();
 
     useEffect(() => {
@@ -27,6 +28,9 @@ const Login = () => {
                     setIsLogged(true)
                     setUserLogged(data.session)
                     localStorage.setItem('userLogged', JSON.stringify(data.session));
+                    data.session.roles === "admin" ?
+                    navigate('/admin')
+                    : navigate('/')
                 } else {
                     let data = await response.json()
                     data?.message
@@ -48,8 +52,8 @@ const Login = () => {
                     </form>
                 </div>
             { isLogged
-                ? (<span>Opa, logado!!</span>)
-                : (<span>Ops! ainda não...</span>)
+                ? (<span>Logado</span>)
+                : (<span></span>)
             }
             <br />
             </div>

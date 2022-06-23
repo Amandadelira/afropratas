@@ -49,7 +49,7 @@ const ListaAdmin = () => {
         <ul className="barra_create">
             <li className="social_create">
                 <Link to="/admin/cadastra-produto">
-                <FcAddImage />Cadastrar Produto</Link>
+                <FcAddImage />Novo Produto</Link>
             </li>
         </ul>   
 
@@ -62,7 +62,7 @@ const ListaAdmin = () => {
                     <Card.Img variant="top" src={product.photo} alt={product.title} className="cardis" />
                     <Card.Body className="textinho">
                       <div className="texto">
-                          <Card.Title><h1>{product.title}</h1></Card.Title>
+                          <Card.Title className="jun"><h1>{product.title}</h1></Card.Title>
                           <div className="iconsad">
                             <a onClick={() => setDeleteId(product.id)}>
                               <FcFullTrash className="lixeirinha" />
@@ -71,8 +71,8 @@ const ListaAdmin = () => {
                               <FcEditImage className="editinho" />
                             </Link>
                           </div>
+                      <Card.Text className="valor">{product.price}</Card.Text>
                       </div>
-                      <p>{product.price}</p>
                     </Card.Body>
                   </div>                              
             )
